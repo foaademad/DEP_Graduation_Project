@@ -1,2 +1,2 @@
-# DEP_Graduation_Project
+# DEPI_Graduation_Project
 Travel &amp; Tour Booking Website
