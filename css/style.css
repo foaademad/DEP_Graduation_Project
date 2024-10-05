@@ -26,6 +26,7 @@ nav ul{
 }
 .navbar ul{
     margin-bottom: 0 !important;
+    padding-left: 0rem !important;
 }
 
 .header{
@@ -329,17 +330,349 @@ span{
 
 
 
+/* section3  */
+
+
+.section3 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section3 .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.section3 .image-section {
+    flex: 1;
+   
+    padding: 20px;
+    text-align: center;
+    height: auto;
+
+    padding-left: 30px;
+
+}
+.section3 .image-section img {
+    width: 37vw;
+    border-radius: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.section3 .details {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: left;
+    height: auto;
+}
+
+.section3 .details h1 {
+    font-size: 2.2em;
+    padding-top: 10px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.section3 .details p {
+    font-size: 1em;
+    
+    margin-bottom: 20px;
+}
+
+.section3 .details>span {
+    font-size: 1em;
+    color: orange;
+    letter-spacing: 3px;
+    
+    padding-bottom: 700px;
+}
+
+
+.section3 .details .subheading {
+    color: #f05d23;
+    font-weight: bold;
+}
+
+.section3 .details .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.section3 .details .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 33px;
+  
+}
+
+.section3 .details.icon .yellow {
+    background-color: #ffce4b;
+}
+
+.section3 .details .icon.red {
+    background-color: #fa5e54;
+}
+
+.section3 .details .icon.blue {
+    background-color: #2d8694;
+}
+
+.section3 .details .step-text h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #16213e;
+}
+
+.section3 .details .step-text p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
 
 
 
+.section4  {
+    position: relative;
+    height: 250px;
+    background: url('../media/Rectangle 19294.png') no-repeat center center/cover; /* Background image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+/* .section4 .banner {
+padding: 130px;
+} */
+
+.banner-text {
+    
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner-text span {
+   
+    font-size: 44px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.underline {
+    position: absolute;
+    bottom: 120px;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+}
 
 
 
+/* section5  *
+ /* General Styling */
+.tour-promotion {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+   
+  }
+  
+  .promotion-text {
+    width: 85%;
+
+    margin-bottom: 20px;
+  }
+  
+  .promotion-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .promotion-text p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #666;
+  }
+  
+  .promotion-text button {
+    background-color: #ff7043;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .images-section {
+    display: flex;
+    flex-direction: column; /* Stack images vertically on small screens */
+    align-items: center;
+  }
+  
+  /* Arch Image Styling */
+  .arch-image {
+    width: 300px;
+    height: 500px;
+    border-radius: 50%/20% 20% 0 0; 
+    border: 2px solid #c96508;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .arch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Grid for Other Images */
+  .image-grid {
+    display: flex;
+   flex-wrap: wrap;
+    gap: 30px;
+  }
+  .last-image{
+    margin-right: -90px;
+  }
+  .image-item {
+    position: relative;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-item span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 69, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+/* section6  */
+
+
+/* General Container Styling */
+.section6 .promotion-container {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    height: 400px;
+  }
+  
+  /* Individual Promotion Box Styling */
+  .section6 .promotion-box {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Specific Backgrounds */
+  .section6 .nature {
+    background-image: url('nature.jpg'); /* Replace with your image URL */
+  }
+  
+  .section6 .cities {
+    background-image: url('cities.jpg'); /* Replace with your image URL */
+  }
+  
+  /* Promotion Text Styling */
+  .section6 .promotion-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 5px;
+    width: 99%;
+  }
+  
+  .section6 .promotion-content h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .section6 .promotion-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .section6 .promotion-content button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .section6 .promotion-content button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  
 
 
 
+  @media (max-width: 900px) {
+    .navbar ul{
+        margin-bottom: 0 !important;
+        padding-left: 0rem !important;
+    }
+    
+  }
 
+  @media (max-width: 820px) {
+    .arch-image {
+display: none!important;
+    }
+    .last-image{
+        margin-right: 0px;
+      }
+    
 
+  }
 
 
 @media (max-width: 800px) {
@@ -349,7 +682,7 @@ span{
         align-items: center;
     }
 
-   .section2 .image-section, .details {
+   .section2,.section3 .image-section, .details {
         min-width: 100%;
         text-align: center;
     }
@@ -357,6 +690,18 @@ span{
         font-size: 1.6em;
         
     }
+    .section3 .image-section img {
+        width: 80vw;
+        justify-content: flex-start;
+        display: flex;
+        
+    }
+    .section6 .promotion-container {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        flex-direction: column;
+      }
 }
 
 
@@ -369,5 +714,32 @@ span{
         font-size: .8em;
         margin-bottom: 20px;
     }
+    .section3 .details {
+font-size: 3vw;
+    }
+    .promotion-text,.image-item{
+        width: 100%;
+    }
+    .promotion-text h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .promotion-text button {
+        background-color: #ff7043;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    h4{
+        font-size: 12px;
+    }
+    .section6 .promotion-container {
+
+        width: 90%;
+        
+      }
 
 }
