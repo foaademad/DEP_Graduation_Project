@@ -1,0 +1,13 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="100" markerHeight="10" 
+                  refX="5" refY="3" orient="auto">
+            <polygon points="0,0 7,3 0,6" fill="orange" />
+          </marker>
+        </defs>
+        <text x="10" y="40" font-family="serif" font-size="36" fill="black">Travel</text>
+        <path d="M 15 50 C 40 70, 160 70, 105 20" 
+              stroke="orange" stroke-width="3" fill="none" 
+              marker-end="url(#arrow)" />
+      </svg>
+      
