@@ -52,35 +52,35 @@ function setLanguage(language) {
     }
 }
 //* themes:  */
-function toggleTheme() {
-   // تحقق من الثيم الحالي وقم بالتبديل بين 'dark' و 'light'
-let currentTheme = document.documentElement.getAttribute("data-bs-theme");
-currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+// function toggleTheme() {
+//    // تحقق من الثيم الحالي وقم بالتبديل بين 'dark' و 'light'
+// let currentTheme = document.documentElement.getAttribute("data-bs-theme");
+// currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-// تغيير الثيم في الـ DOM
-document.documentElement.setAttribute("data-bs-theme", currentTheme);
+// // تغيير الثيم في الـ DOM
+// document.documentElement.setAttribute("data-bs-theme", currentTheme);
 
-// تغيير أيقونة الثيم
-document.getElementById("theme-icon").className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+// // تغيير أيقونة الثيم
+// document.getElementById("theme-icon").className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
-// تخزين الثيم الجديد في Local Storage
-localStorage.setItem("theme", currentTheme);
+// // تخزين الثيم الجديد في Local Storage
+// localStorage.setItem("theme", currentTheme);
 
 
-}
+// }
 
 // استعادة اللغة المخزنة عند تحميل الصفحة
 window.onload = function() {
     const savedLanguage = localStorage.getItem("language") || "en"; // استخدام اللغة المحفوظة أو الافتراضية (en)
     setLanguage(savedLanguage);
 
-    // استعادة ثيم المخزن عند تحميل الصفحة
-    const savedTheme = localStorage.getItem("theme") || 'dark'; // استخدام الثيم المخزن أو الافتراضي (dark)
+    // // استعادة ثيم المخزن عند تحميل الصفحة
+    // const savedTheme = localStorage.getItem("theme") || 'dark'; // استخدام الثيم المخزن أو الافتراضي (dark)
 
-    // تعيين الثيم على الصفحة
-    document.documentElement.setAttribute("data-bs-theme", savedTheme);
+    // // تعيين الثيم على الصفحة
+    // document.documentElement.setAttribute("data-bs-theme", savedTheme);
 
-    // تحديث أيقونة الثيم بناءً على الثيم المخزن
-    document.getElementById("theme-icon").className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    // // تحديث أيقونة الثيم بناءً على الثيم المخزن
+    // document.getElementById("theme-icon").className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
 };
