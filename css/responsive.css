@@ -124,6 +124,21 @@
         }
        
   }
+  @media (max-width: 767) {
+
+    .navbar-expand-md .navbar-collapse {
+        display: flex ;
+
+        flex-direction: column!important;
+    }
+  }
+
+
+
+
+
+
+
   @media (max-width: 600px) {
     .hero-section {
         padding-left: 50px;
@@ -131,7 +146,7 @@
         margin-left: 20px;
           } 
         
-          } 
+         
       .section6 .promotion-container {
           display: block;
           
@@ -154,7 +169,7 @@
           margin-bottom: 20px;
         } */
   
-  
+    } 
   
   @media (max-width: 500px) {
   

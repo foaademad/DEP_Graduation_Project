@@ -1,8 +1,6 @@
 
 // section7
       
-
-// // section4
 const swiper = new Swiper('.slider-wrapper', {
     loop: true,
     grabCursor: true,
@@ -41,8 +39,27 @@ const swiper = new Swiper('.slider-wrapper', {
   
 
 
+// form 
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modal = document.getElementById('modal');
 
+    // عند الضغط على زرار "Build Your Own Package" يتم إظهار الفورم مع الأنيميشن
+    openModalBtn.addEventListener('click', () => {
+      modal.classList.add('active');
+    });
 
+    // عند الضغط على زر "X" يتم إخفاء الفورم
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    // إخفاء الفورم عند الضغط خارجها
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
 
 
 
