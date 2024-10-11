@@ -8,7 +8,7 @@
     
   }
   
-  
+
     @media (max-width: 1000px) {
       .section6 .promotion-content h4 {
           font-size: 1.1em;
@@ -131,6 +131,7 @@
 
         flex-direction: column!important;
     }
+    
   }
 
 

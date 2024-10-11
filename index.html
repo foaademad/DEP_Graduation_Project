@@ -12,91 +12,23 @@
         rel="stylesheet">
     <!-- fontawesome library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/a19206bc17.js" crossorigin="anonymous"></script>
-    <!-- css file  -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-
     <!-- owl carousel library => slide package (section 8)-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <!-- swiper => section7 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css file  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     
 </head>
 
 <body>
 
-        <!-- <nav class="navbar navbar-expand-md container">
-            <div class="container-fluid">
-                <a class="llogo" href="#" id="nav-brand">
-                    <img src="./media/header.svg" class="mt-3" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <div id="small-nav">
-                        <ul class="slidbar1 ">
-                            <li class="nav-item">
-
-                                <a class="nav-link " aria-current="page" href="#" id="navOverview"
-                                    data-translate="navOverview">Home</a>
-                            </li>
-                            <li class="nav-item">
-
-                                <a class="nav-link" aria-current="page" href="#" id="navStudents"
-                                    data-translate="navStudents">About</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul style="margin-top: 20px;" class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Honeymoon Packages</a></li>
-                                    <li><a class="dropdown-item" href="#">Tours Packages</a></li>
-                                    <li><a class="dropdown-item" href="#"> Musical Events</a></li>
-                                    <li><a class="dropdown-item" href="#">Build Package</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-
-                                <a class="nav-link" href="#" id="nav-projects" data-translate="navCourses">Upcomming
-                                    Packages</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="buttons-container">
-
-                        <div class="btn-group">
-                            <button type="button" style="border: 2px solid orange;"
-                                class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i id="lang-icon" class="fas fa-globe"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end mt-3">
-                                <li>
-                                    <a class="dropdown-item" href="#" onclick="setLanguage('en')">En</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#" onclick="setLanguage('ar')">Ar</i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav> -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-gradient position-fixed w-100 top-1 z-3">
+    <nav class="navbar  navbar-expand-lg bg-body-tertiary bg-gradient  w-100 top-1 z-3">
             <div class="container-fluid">
                 <a class="llogo" href="#" id="nav-brand">
                     <img src="./media/header.svg" class="mt-3" alt="" width="150px">
@@ -118,10 +50,10 @@
                         <a class="nav-link" aria-current="page" href="#" id="navStudents"
                             data-translate="navStudents">About</a>
                     </li>
-                    <li class="nav-item dropdown">
+                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Services
+                            Our Travel
                         </a>
                         <ul style="margin-top: 20px;" class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Honeymoon Packages</a></li>
@@ -129,8 +61,7 @@
                             <li><a class="dropdown-item" href="#"> Musical Events</a></li>
                             <li><a class="dropdown-item open-btn"  href="#" class="" id="openModalBtn">Build Package</a></li>
                         </ul>
-                    </li>
-
+                    </div> 
                     <!-- الفورم المغلقة -->
                     <div class="modal" id="modal">
                         <div class="modal-content">
@@ -183,34 +114,60 @@
                         </div>
                     </div>
 
-  
                     <li class="nav-item">
-
-                        <a class="nav-link" href="./Upcomming Packages.html" id="nav-projects" data-translate="navCourses">Upcomming Packages</a>
+                        <a class="nav-link" href="#" id="nav-projects" data-translate="navCourses">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Upcomming Packages.html" id="nav-projects" data-translate="navCourses">Upcomming Travel</a>
                     </li>
                     
                 </ul>
+
                 <div class="buttons-container">
-                  
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i id="lang-icon" class="fas fa-globe"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-lg-end">
-                      <li>
-                        <a class="dropdown-item" id="lang-en" href="#" onclick="setLanguage('en')">En</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" id="lang-ar" href="#" onclick="setLanguage('ar')">Ar</i></a>
-                      </li>
-                    </ul>
-                  </div>
+                    <img src="./media/user-img/1.jpg" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" alt="" width="50px" height="50px" class="rounded-circle">
+                    
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i id="lang-icon" class="fas fa-globe"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li>
+                            <a class="dropdown-item" id="lang-en" href="#" onclick="setLanguage('en')">En</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" id="lang-ar" href="#" onclick="setLanguage('ar')">Ar</i></a>
+                        </li>
+                        </ul>
+                    </div>
                 </div>
               </div>
             </div>
-          </nav>
-
+    </nav>
+    <!-- form offcanvas  -->                 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="wrapper animated bounce">
+            <h1>Codepen.io</h1>
+            <hr>
+            <form>
+                <label id="icon" for="username"><i class="fa fa-user"></i></label>
+                <input type="text" placeholder="Username" id="username">
+                <label id="icon" for="password"><i class="fa fa-key"></i></label>
+                <input type="password" placeholder="Password" id="password">
+                <input type="submit" value="Sign In">
+                <hr>
+                <div class="crtacc"><a href="#">Create Account</a></div>
+            </form>
+        </div>
+  
+        
+    </div>
   
     <!-- main content    -->
     <main>
@@ -384,15 +341,8 @@
                 </div>
             </div>
         </div>
-        <div class="company_img">
-            <img src="./media/company_name/image 909.png" alt="">
-            <img src="./media/company_name/image 912.png" alt="">
-            <img src="./media/company_name/Mask group (1).png" alt="">
-            <img src="./media/company_name/Mask group (2).png" alt="">
-            <img src="./media/company_name/Mask group.png" alt="">
-        </div>
         <!-- section 1 -->
-        <section class="section1">
+        <!-- <section class="section1">
             <p style="text-align: center;">CATEGORY</p>
             <h1 style="text-align: center;">We Offer Best Services</h1>
             <div class="container">
@@ -418,8 +368,8 @@
                 </div>
             </div>
 
-        </section>
-        <!-- section 2 -->
+        </section> -->
+        <!-- section 2 
         <section class="section2">
             <div class="container">
                 <div class="content">
@@ -436,7 +386,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- section 3 -->
         <section class="section3">
             <div class="container">
@@ -529,33 +479,12 @@
 
         </section>
 
-        <!-- section 6 -->
-        <section class="section6">
-            <div class="promotion-container">
-                <div class="promotion-box nature">
-                    <div class="promotion-content">
-                        <h4>PROMOTION</h4>
-                        <h1>Explore Nature</h1>
-                        <button>View Packages</button>
-                    </div>
-                </div>
-
-                <div class="promotion-box cities">
-                    <div class="promotion-content">
-                        <h4>PROMOTION</h4>
-                        <h1>Explore Cities</h1>
-                        <button>View Packages</button>
-                    </div>
-                </div>
-            </div>
-
-        </section>
 
         <!-- section 7 -->
         <section id="section7" class="section7">
             <div class="head-content">
                 <span>trendy</span>
-                <h1>Our Trending Tour <br>Packages</h1>
+                <h1>Our Trending <span>Travel</span></h1>
             </div>
             <div class="sliddes">
                 <div class="container-slide swiper">
@@ -995,18 +924,21 @@
         </section>
 
     </main>
+    
+
+
+
     <footer>
 
     </footer>
 
 
+
+
+    
     <!-- auto moving slide in section7 -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <!-- swiper => section7 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- language file  -->
