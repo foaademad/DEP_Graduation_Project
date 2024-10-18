@@ -1,5 +1,6 @@
 //* translation:  */
-let currentTheme = 'dark';
+let currentTheme = 'light';
+
 let currentLanguage = 'en';
 
 

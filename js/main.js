@@ -39,7 +39,7 @@ const swiper = new Swiper('.slider-wrapper', {
   
 
 
-// form 
+// form  on navbar
     const openModalBtn = document.getElementById('openModalBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modal = document.getElementById('modal');
@@ -62,9 +62,71 @@ const swiper = new Swiper('.slider-wrapper', {
     });
 
 
+// form on login as user  
+        document.addEventListener("DOMContentLoaded", function() {
+            // الوصول إلى العناصر
+            let loginForm = document.getElementById("loginForm");
+            let signUpForm = document.getElementById("signUpForm");
+            let LoginAdmin =document.getElementById("loginAdmin");
+            let showSignUpLink = document.getElementById("showSignUp");
+            let showLoginLink = document.getElementById("showLogin");
+            let loginAdminForm = document.getElementById("loginadminForm");
 
+            // الحدث عند الضغط على "Sign up"
+            showSignUpLink.addEventListener("click", function(event) {
+                event.preventDefault(); // منع إعادة تحميل الصفحة
+                loginForm.style.display = "none"; // إخفاء فورم تسجيل الدخول
+                signUpForm.style.display = "block"; // إظهار فورم التسجيل
+            });
 
+            // الحدث عند الضغط على "Login"
+            showLoginLink.addEventListener("click", function(event) {
+                event.preventDefault(); // منع إعادة تحميل الصفحة
+                signUpForm.style.display = "none"; // إخفاء فورم التسجيل
+                loginForm.style.display = "block"; // إظهار فورم تسجيل الدخول
+            });
+            
+            // الحدث عند الضغط على "Login As Admin"
+            LoginAdmin.addEventListener("click", function(event) {
+                event.preventDefault(); // منع ��عادة تحميل الصفحة
+                loginForm.style.display = "none"; // ��خفا�� فورم تسجيل الدخول
+                loginAdminForm.style.display = "block"; // ����هار فورم تسجيل الدخول كمشرف
+            });
+        });
 
+    
+// store username and password of admin login in localStorage 
+        document.getElementById("loginadminForm").addEventListener("submit", function(event) {
+
+        //  let adminUsername =  localStorage.setItem("adminUsername", "admin");
+            // localStorage.setItem("adminPassword", "1234");
+
+            event.preventDefault(); // منع ��عادة تحميل الصفحة
+
+            let adminUsernameInput = document.getElementById("adminUsernameInput").value;
+            let adminPasswordInput = document.getElementById("adminPasswordInput").value;
+            if( adminUsernameInput === "admin" &&  adminPasswordInput  === "1234"){
+                
+                 window.location.href = "../AdminLogin.html"; // هنا يمكنك تحديد الصفحة المطلوبة
+                
+            } else {
+                alert("Invalid Credentials!");
+                
+            }
+            // make input empty after login
+            document.getElementById("adminUsernameInput").value = ""
+            document.getElementById("adminPasswordInput").value = ""
+
+        });
+           
+
+        // login admin after registration
+        document.getElementById("loginadminForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // منع ��عادة تحميل الصفحة
+            
+        });
+
+    
 
 
 
