@@ -1,7 +1,7 @@
 
 
 
-@mediax-width: 1300px) { (ma
+@media(max-width: 1300px) { 
     .feedback-slider-thumb{
       display: none;
     }
