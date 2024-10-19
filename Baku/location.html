@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <!-- add icon  -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icon.svg">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/a19206bc17.js" crossorigin="anonymous"></script>
+    
+    <!-- css file  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="location_style.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar  navbar-expand-lg bg-body-tertiary bg-gradient  w-100 top-1 z-3">
+                <div class="container-fluid">
+                    <a class="llogo" href="/index.html" id="nav-brand">
+                        <img src="/media/header.svg" class="mt-3" alt="" width="150px">
+                    </a>
+                    
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+    
+                            <a class="nav-link " aria-current="page" href="/index.html" id="navOverview"
+                                data-translate="navOverview">Home</a>
+                        </li>
+                        <li class="nav-item">
+    
+                            <a class="nav-link" aria-current="page" href="" id="navStudents"
+                                data-translate="navStudents">About</a>
+                        </li>
+                          
+                         <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Our Travel
+                            </a>
+                            <ul style="margin-top: 20px;" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Honeymoon Packages</a></li>
+                                <li><a class="dropdown-item" href="#">Tours Packages</a></li>
+                                <li><a class="dropdown-item" href="#"> Musical Events</a></li>
+                                <li><a class="dropdown-item open-btn"  href="#" class="" id="openModalBtn">Build Package</a></li>
+                            </ul>
+                        </div> 
+                        
+                        <div class="modal" id="modal">
+                            <div class="modal-content">
+                            <span class="close-btn" id="closeModalBtn">&times;</span>
+    
+                            <h4>Build Your Own Package</h4>
+    
+                            <label for="destination1">Enter destination (country, region or city)</label>
+                            <input type="text" id="destination1" placeholder="Switzerland">
+    
+                            <label for="destination2">Enter destination (country, region or city)</label>
+                            <input type="text" id="destination2" placeholder="Lauterbrunen">
+    
+                            <span class="add-destination">+ Add destination</span>
+    
+                            <div class="date-guest">
+                                <input type="date" placeholder="Start Date">
+                                <select>
+                                <option>2 adults</option>
+                                <option>1 adult</option>
+                                <option>3 adults</option>
+                                <option>4 adults</option>
+                                </select>
+                            </div>
+    
+                            <h3>Activities preferences (optional)</h3>
+                            <div class="preferences">
+                                <label><input type="checkbox"> Culture</label>
+                                <label><input type="checkbox"> Outdoors</label>
+                                <label><input type="checkbox"> Relaxing</label>
+                                <label><input type="checkbox"> Wildlife</label>
+                                <label><input type="checkbox"> Romantic</label>
+                                <label><input type="checkbox"> Religious</label>
+                                <label><input type="checkbox"> Hiking</label>
+                                <label><input type="checkbox"> Musical</label>
+                                <label><input type="checkbox"> Shopping</label>
+                                <label><input type="checkbox" checked> Business</label>
+                                <label><input type="checkbox"> Museums</label>
+                                <label><input type="checkbox"> Party</label>
+                                <label><input type="checkbox"> Traditions</label>
+                                <label><input type="checkbox"> Walks</label>
+                                <label><input type="checkbox"> Fishing</label>
+                                <label><input type="checkbox"> Cruise</label>
+                                <label><input type="checkbox" checked> Guide</label>
+                                <label><input type="checkbox" checked> Healthcare</label>
+                                <label><input type="checkbox"> Accomodation</label>
+                            </div>
+    
+                            <button class="build-btn">Build Package</button>
+                            </div>
+                        </div>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/explore.html" id="nav-projects" data-translate="navCourses">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Upcomming Packages.html" id="nav-projects" data-translate="navCourses">Upcomming Travel</a>
+                        </li>
+                        
+                    </ul>
+    
+                    <div class="buttons-container">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i id="lang-icon" class="fas fa-globe"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <li>
+                                <a class="dropdown-item" id="lang-en" href="#" onclick="setLanguage('en')">En</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" id="lang-ar" href="#" onclick="setLanguage('ar')">Ar</i></a>
+                            </li>
+                            </ul>
+                        </div>
+                        <img src="/media/user-img/download.jpg" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" alt="" width="50px" height="50px" class="rounded-circle">
+                        
+    
+                    </div>
+                  </div>
+                </div>
+        </nav>
+        <div class="overlay">
+            <p class="subtitle">Search Tour</p> 
+            <h1 class="title">Travel With Us</h1>  
+            
+        </div> 
+    </header>
+    <!-- form offcanvas  -->                 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header z-3">
+
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="login-root">
+            <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+              <div class="loginbackground box-background--white padding-top--64">
+                <div class="loginbackground-gridContainer">
+                  <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                    <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                    </div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                    <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                    <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                    <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                    <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                    <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                    <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                    <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                    <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+                  <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Login Form</a></h1>
+                </div>
+                <!-- login as a user  -->
+                <div class="formbg-outer " id="loginForm">
+                  <div class="formbg">
+                    <div class="formbg-inner padding-horizontal--48">
+                      <span class="padding-bottom--15">Sign in to your account</span>
+                      <form id="stripe-loginform1">
+                        <div class="field padding-bottom--24">
+                          <label for="email">Email</label>
+                          <input type="email" name="email">
+                        </div>
+                        <div class="field padding-bottom--24">
+                          <div class="grid--50-50">
+                            <label for="password">Password</label>
+                            <div class="reset-pass">
+                              <a href="#">Forgot your password?</a>
+                            </div>
+                          </div>
+                          <input type="password" name="password">
+                        </div>
+                        
+                        <div class="field padding-bottom--24">
+                          <input type="submit" name="submit" value="Continue">
+                        </div>
+                        <div class="field">
+                          <a class="ssolink" href="#" id="loginAdmin">Login As Admin</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="footer-link padding-top--24">
+                    <span>Don't have an account? <a href="#" id="showSignUp">Sign up</a></span>
+                  </div>
+                </div>
+
+                <!-- login as a new user  -->
+                <div class="formbg-outer " id="signUpForm" style="display: none;">
+                    <div class="formbg">
+                      <div class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15">Make a new a account</span>
+                        <form id="stripe-loginform2">
+                          <div class="field padding-bottom--24">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" required>
+                          </div>
+                          <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password">Password</label>
+                            </div>
+                            <input type="password" name="password"required>
+                          </div>
+                          <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password">Confirm Password</label>
+                            </div>
+                            <input type="password" name="password" required>
+                          </div>
+                          
+                          <div class="field padding-bottom--24">
+                            <input type="submit" name="submit" value="Sign Up">
+                          </div>
+                          
+                        </form>
+                      </div>
+                    </div>
+                    <div class="footer-link padding-top--24">
+                      <span>Already have an account? <a href="#" id="showLogin">Login</a></span>
+                    </div>
+                </div>
+
+                <!-- login as admin  -->
+                <div class="formbg-outer " id="loginadminForm" style="display: none;">
+                    <div class="formbg">
+                      <div class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15">login As Admin </span>
+                        <form id="stripe-loginform3">
+                          <div class="field padding-bottom--24">
+                            <label for="email">Username</label>
+                            <input type="text" name="text" id="adminUsernameInput" required>
+                          </div>
+                          <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password">Password</label>
+                            </div>
+                            <input type="password" name="password" id="adminPasswordInput" required>
+                          </div>
+                          <div class="field padding-bottom--24">
+                           
+                            <input type="submit" name="submit" value="Login">
+                          </div>     
+                        </form>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div> 
+    </div>
+    <main>
+        <div class="main-header">
+            <div class="div">
+                <a href="information.htm">
+                    <div>
+                        <ul>
+                            <li class="li"><img src="icons/info.svg" alt="">
+                                <span>Information</span></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="div">
+                <a href="tour_plan.html">
+                    <div class="inside-second">
+                        <ul>
+                            <li class="li"><img src="icons/tour_plan.svg" alt="">
+                                <span class="span">Tour Plan</span></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class=" in div">
+                <a class="in" href="">
+                    <div>
+                        <ul>
+                            <li><img src="icons/location.svg" alt="">
+                                <span>Location</span></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <div class="div">
+                <a href="gallery.html">
+                    <div>
+                        <ul>
+                            <li><img src="icons/gallery.svg" alt="">
+                                <span>Gallery</span></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="main-container">
+            <section class="left-section">
+               <p class="first-p">Location</p>
+               <p class="second-p">Baku, the capital of Azerbaijan, is located on the western shore of the Caspian Sea. It lies on the southern side of the Absheron Peninsula, around the wide curving sweep of the Bay of Baku. Baku is a city of contrasts, blending ancient history with modern development.</p>
+               <div class="map"><div style="max-width:100%;overflow:hidden;color:red;width:NaNpx;height:620px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Baku&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="the-googlemap-enabler" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="get-map-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div></div>
+               <p class="second-p">The Old City, or Icherisheher, is a UNESCO World Heritage site, featuring narrow alleys, historic buildings, and the iconic Maiden Tower. In contrast, the Flame Towers and the Heydar Aliyev Center showcase the city’s contemporary architecture. <br> <br> Baku’s location on the Caspian Sea provides stunning waterfront views and a pleasant climate. The city’s vibrant cultural scene includes numerous museums, theaters, and music festivals. Baku is also known for its lively nightlife, with a variety of bars, clubs, and restaurants. The city’s efficient public transportation system makes it easy to explore its many attractions5.
+               </p>
+               <div class="tree"><img src="images/tree.png" alt=""></div>
+            </section>
+            <section class="right-section">
+                <form action="">
+                    <div class="form-container">
+                        <h2>Book This Tour</h2>
+                        <p>Join us for an amazing and exciting tour. It will be an unforgettable experience you won't want to miss!</p>
+                        <div class="form-group">
+                            <!-- <i class="hidden fa-solid fa-user"></i> -->
+                            <input class="input" type="text" id="name" placeholder="Name">
+                            <!-- <i class="fa-solid fa-user"></i> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- <i class="hidden fa-solid fa-envelope"></i> -->
+                            <input class="input" type="email" id="email" placeholder="Email">
+                            <!-- <i class="fa-solid fa-envelope"></i> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- <i class="hidden fa-solid fa-envelope"></i> -->
+                            <input class="input" type="email" id="confirm-email" placeholder="Confirm Email">
+                            <!-- <i class="fa-solid fa-envelope"></i> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- <i class="hidden fa-solid fa-phone"></i> -->
+                            <input class="input" type="tel" id="phone" placeholder="Phone">
+                            <!-- <i class="fa-solid fa-phone"></i> -->
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="date" id="date">
+                        </div>
+                        <div class="form-group">
+                            <!-- <i class="hidden fa-solid fa-ticket"></i> -->
+                            <input class="input" type="number" id="tickets" placeholder="Number of ticket">
+                            <!-- <i class="fa-solid fa-ticket"></i> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- <i class="hidden fa-solid fa-message"></i> -->
+                            <textarea class="input" name="" id="" placeholder="Message"></textarea>
+                            <!-- <i class="fa-solid fa-message"></i> -->
+                        </div>
+                        <div class="button-container">
+                            <button type="button" class="check-availability-button">Check Availability</button>
+                            <button id="submit" type="submit" class="book-now-button">Book Now</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="div-form">                <img class="under-form" src="images/under_form3.png" alt="">
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer    -->
+    <footer class="footer" id="footer">
+        <!-- start footer-main -->
+        <div class="footer-main">
+            <!-- travel -->
+            <div class="footer-main-travel">
+                <img src="/media/header.svg" alt="">
+                <p class="p">Travel helps companies manage payments easily.</p>
+                <!-- <div class="icon-row">
+                    <a href="#"><img src="svg/lin.svg" alt=""></a>
+                    <a href="#"><img src="svg/messag.svg" alt=""></a>
+                    <a href="#"><img src="svg/twiter.svg" alt=""></a>
+                    <a href="#"><img src="svg/fac.svg" alt=""></a>
+                </div> -->
+            </div>
+            <!-- company -->
+            <div class="footer-main-Company">
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Blog</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+            <!-- Destinations -->
+            <div class="footer-main-Destinations">
+                <h4>Destinations</h4>
+                <ul>
+                    <li>Maldives</li>
+                    <li>Los Angelas</li>
+                    <li>Las Vegas</li>
+                    <li>Torronto</li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div class="footer-main-Newsletter">
+                <h4>Join Our Newsletter</h4>
+                <div class="footer-main-Newsletter-bp">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </div>
+                <p class="p">Will send you weekly updates for your better tour packages.</p>
+            </div>
+        </div>
+        <!-- end footer-main -->
+        <!-- start footer-end -->
+        <div class="footer-end">
+            <p>Copyright @ Travel Team 2024. All Rights Reserved.</p>
+        </div>
+        <!-- end footer-end -->
+      </footer>
+      
+      
+        
+          <!-- auto moving slide in section7 -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+          <!-- swiper => section7 -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <!-- custom scripts -->
+          <script src="/js/lannguage_thems.js"></script>
+          <script src="/js/main.js"></script>
+          <script src="refresh_message.js"></script>
+      
+    </body>
+    </html>
+    

@@ -8,14 +8,14 @@ ul {
 .btn-custom {
     display: inline-block;
     background-color: #E36853;
-    /*لونالخلفيةمثلالصورة*/color: white;
-    /*لونالنص*/padding: 10px 20px;
+    color: white;
+    padding: 10px 20px;
     margin: 15px;
-    /*مساحةداخليةلتوسيعالزر*/border-radius: 8px;
-    /*جعلالحوافدائرية*/text-align: center;
-    /*توسيطالنصداخلالزر*/text-decoration: none;
-    /*إزالةالخطالسفلي*/font-size: 16px;
-    /*حجمالنص*/font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
 }
 
   .btn-custom:hover {
