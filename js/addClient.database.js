@@ -38,25 +38,30 @@ const dbPromise = new Promise((resolve, reject) => {
 
 
  function addClient() {
-    const clientName = document.getElementById("clientName").value;
+    
     const clientEmail = document.getElementById("clientEmail").value;
-    const clientPhoneNumber = document.getElementById("clientPhoneNumber").value;
-    const clientMessage = document.getElementById("clientMessage").value;
+    const clientPass = document.getElementById("clientpass").value;
+    const clientConfirmPass = document.getElementById("clientconfirmpass").value;
+    // const clientMessage = document.getElementById("clientMessage").value;
 
-    if (!clientName || !clientEmail || !clientPhoneNumber || !clientMessage) {
+    if (!clientEmail || !clientPass || !clientConfirmPass ) {
         alert("Please fill out all fields.");
         return;
     }
-
+    // confirm the password and confirm password equal 
+    if (clientPass!== clientConfirmPass) {
+        alert("you should write the same password");
+        return;
+    }
+    
     dbPromise.then((db) => {
         const transaction = db.transaction("client", "readwrite");
         const clientStore = transaction.objectStore("client");
 
         const newClient = { 
-            name: clientName, 
             email: clientEmail, 
-            phoneNumber: clientPhoneNumber, 
-            message: clientMessage 
+            pass: clientPass,
+            confirmPass: clientConfirmPass 
         };
 
         const addRequest = clientStore.add(newClient); // استخدم add لإضافة بيانات جديدة دائماً
@@ -69,6 +74,11 @@ const dbPromise = new Promise((resolve, reject) => {
             console.error("خطأ في إضافة العميل:", event.target.error);
         };
     });
+    // emputy the input 
+    document.getElementById("clientEmail").value = "";
+    document.getElementById("clientpass").value = "";
+    document.getElementById("clientconfirmpass").value = "";
+
   
 }
 
@@ -111,26 +121,22 @@ function displayClients(clients) {
             const cardBody = document.createElement("div");
             cardBody.className = "small-card-body";
 
-            const title = document.createElement("h3");
-            title.className = "card-title";
-            title.textContent = client.name;
-
             const email = document.createElement("p");
             email.className = "card-email";
             email.textContent = `Email: ${client.email}`;
 
-            const phone = document.createElement("p");
-            phone.className = "card-phone";
-            phone.textContent = `Phone: ${client.phoneNumber}`;
+            const pass = document.createElement("p");
+            pass.className = "card-password";
+            pass.textContent = `password: ${client.pass}`;
 
-            const message = document.createElement("p");
-            message.className = "card-message";
-            message.textContent = `Message: ${client.message}`;
+            const confirmPass = document.createElement("p");
+            confirmPass.className = "card-password";
+            confirmPass.textContent = `Confirm Password: ${client.confirmPass}`;
 
-            cardBody.appendChild(title);
+
             cardBody.appendChild(email);
-            cardBody.appendChild(phone);
-            cardBody.appendChild(message);
+            cardBody.appendChild(pass);
+            cardBody.appendChild(confirmPass);
 
             // إنشاء زر التحديث والحذف
             const cardActions = document.createElement("div");

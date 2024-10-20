@@ -70,7 +70,7 @@
                   </li>
                   </ul>
               </div>
-              <img src="./media/user-img/download.jpg" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" alt="" width="50px" height="50px" class="rounded-circle">
+              <img src="./media/user-img/download.jpg" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" >
               
 
           </div>
@@ -111,10 +111,12 @@
                         </div>
                         <div class="offcanvas-body">
                             <form action="">
-                                <input type="text" id="clientName" placeholder="Client Name" required>
+                                <!-- <input type="text" id="clientName" placeholder="Client Name" required> -->
                                 <input type="email" id="clientEmail" placeholder="Client Email" required>
-                                <input type="number" id="clientPhoneNumber" placeholder="Phone Number" required>
-                                <input type="text" id="clientMessage" placeholder="Message" required>
+                                <input type="password" id="clientpass" placeholder="password" required>
+                                <input type="password" id="clientconfirmpass" placeholder="confirm password" required>
+                                <!-- <input type="number" id="clientPhoneNumber" placeholder="Phone Number" required> -->
+                                <!-- <input type="text" id="clientMessage" placeholder="Message" required> -->
                                 <button type="submit" class="add-btn" onclick="addClient()">Add Client</button>
                             </form>
                         </div>

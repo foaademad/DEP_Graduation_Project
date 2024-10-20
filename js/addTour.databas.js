@@ -100,6 +100,34 @@ function addTour() {
 
 }
 
+// check if the date of Tour exists or not and if it exists allow him to add registraion to the tour and if not print a massege said sorry  this tour does not exist , please add a diffrent date 
+function checkTour(){
+    const tourDate = document.getElementById("date").value;
+    dbPromiseTour.then((db) => {
+        const transaction = db.transaction('tour', 'readonly');
+        const doctorObjectStore = transaction.objectStore('tour');
+        const dentistDoctors = doctorObjectStore.getAll();
+        dentistDoctors.onsuccess = function (event) {
+            let dataCTour = event.target.result
+            console.log(dataCTour)
+            let found = false;
+            dataCTour.forEach(element => {
+                if (element.date === tourDate) {
+                    found = true
+                }
+            });
+            if (found) {
+                addRegistration()
+            } else {
+                alert("Sorry this tour does not exist, please add a different date.")
+            }
+
+        }
+    })
+}
+
+
+
 
 // Function to display the Tour
 function displayTours(tours) {
