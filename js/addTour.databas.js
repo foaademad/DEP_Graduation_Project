@@ -85,7 +85,7 @@ function addTour() {
         people: tourPeople,
         price: tourPrice,
     };
-
+    
         const addRequest = clientStore.add(tour); // استخدم add لإضافة بيانات جديدة دائماً
         addRequest.onsuccess = function () {
             console.log("تمت إضافة العميل بنجاح:", tour);
