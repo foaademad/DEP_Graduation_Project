@@ -398,49 +398,46 @@
                 </div>
             </section>
             <section class="right-section">
-                <form action="">
-                    <div class="form-container">
-                        <h2>Book This Tour</h2>
-                        <p>Join us for an amazing and exciting tour. It will be an unforgettable experience you won't want to miss!</p>
-                        <div class="form-group">
-                            <!-- <i class="hidden fa-solid fa-user"></i> -->
-                            <input class="input" type="text" id="name" placeholder="Name">
-                            <!-- <i class="fa-solid fa-user"></i> -->
-                        </div>
-                        <div class="form-group">
-                            <!-- <i class="hidden fa-solid fa-envelope"></i> -->
-                            <input class="input" type="email" id="email" placeholder="Email">
-                            <!-- <i class="fa-solid fa-envelope"></i> -->
-                        </div>
-                        <div class="form-group">
-                            <!-- <i class="hidden fa-solid fa-envelope"></i> -->
-                            <input class="input" type="email" id="confirm-email" placeholder="Confirm Email">
-                            <!-- <i class="fa-solid fa-envelope"></i> -->
-                        </div>
-                        <div class="form-group">
-                            <!-- <i class="hidden fa-solid fa-phone"></i> -->
-                            <input class="input" type="tel" id="phone" placeholder="Phone">
-                            <!-- <i class="fa-solid fa-phone"></i> -->
-                        </div>
-                        <div class="form-group">
-                            <input class="input" type="date" id="date">
-                        </div>
-                        <div class="form-group">
-                            <!-- <i class="hidden fa-solid fa-ticket"></i> -->
-                            <input class="input" type="number" id="tickets" placeholder="Number of ticket">
-                            <!-- <i class="fa-solid fa-ticket"></i> -->
-                        </div>
-                        <div class="form-group">
-                            <!-- <i class="hidden fa-solid fa-message"></i> -->
-                            <textarea class="input" name="" id="" placeholder="Message"></textarea>
-                            <!-- <i class="fa-solid fa-message"></i> -->
-                        </div>
-                        <div class="button-container">
-                            <button type="button" class="check-availability-button">Check Availability</button>
-                            <button type="submit" class="book-now-button">Book Now</button>
-                        </div>
+              <form action="">
+                <div class="form-container">
+                    <h2>Book This Tour</h2>
+                    <p>Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolo.</p>
+                    
+                    <div class="form-group">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
                     </div>
-                </form>
+
+                    <div class="form-group">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phone" class="form-label">phone</label>
+                      <input type="number" class="form-control" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="date" class="form-label">Date Of The Tour</label>
+                      <input type="date" class="form-control" id="date" required>  
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="number" class="form-label">Number of ticket</label>
+                      <input type="number" class="form-control" id="number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <input type="text" class="form-control" id="message" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="check-availability-button">Check Availability</button>
+                        <button type="submit" class="book-now-button" onclick="addRegistration()" >Book Now</button>
+                    </div>
+                </div>
+            </form>
                 <div class="div-form">                <img class="under-form" src="images/under_form3.png" alt="">
                 </div>
             </section>
@@ -511,7 +508,8 @@
       <script src="/js/lannguage_thems.js"></script>
       <script src="/js/main.js"></script>
       <script src="refresh_message.js"></script>
-  
+      <script src="../js/regestration.js"></script>
+
       
   </body>
   </html>

@@ -63,6 +63,7 @@ fetchregistration();
 
 // Function to add a new tour
 function addRegistration() {
+    event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;;
     const phone = document.getElementById('phone').value;;
@@ -101,7 +102,14 @@ function addRegistration() {
             console.error("خطأ في إضافة العميل:", event.target.error);
         };
     });
-
+    // empty the input 
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('phone').value = "";
+    document.getElementById('date').value = "";
+    document.getElementById('number').value = "";
+    document.getElementById('message').value = "";
+    // fetchregistration(); // reload the list of registrations after adding a new one
 
 }
 // Function to display the registrations

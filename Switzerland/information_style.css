@@ -242,6 +242,17 @@ main {
     background-color: #ececec;
     padding: 20px;
     margin: auto;
+    
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    font-size: 20px;
+}
+.form-group input{
+   width: 100% !important;
 }
 .right-section h2 {
     display: flex;

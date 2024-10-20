@@ -117,7 +117,7 @@ function displayTours(tours) {
 
             const date = document.createElement("p");
             date.className = "card-date";
-            date.textContent = `Date: ${tour.Date}`;
+            date.textContent = `Date: ${tour.date}`;
 
             const people = document.createElement("p");
             people.className = "card-people";

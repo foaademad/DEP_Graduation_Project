@@ -200,6 +200,17 @@ main {
     width: 100%;
 }
 
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    font-size: 20px;
+}
+.form-group input{
+   width: 100% !important;
+}
+
 .right-section{
     width: 36.5%;
 }
