@@ -9,7 +9,7 @@
 
 
 .hero {  
-    background-image: url("/media/bgOflandscape.png");   
+    background-image: url("../media/bgOflandscape.png");   
     background-size: cover;  
     background-position: center;  
     height: 100vh;   
@@ -58,7 +58,7 @@ main {
     position: relative;
     margin: auto;
     margin-top: -55px;
-    width: 75%;
+    width: 79%;
     align-items: center;
     background: #fff;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
