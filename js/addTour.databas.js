@@ -117,7 +117,8 @@ function checkTour(){
                 }
             });
             if (found) {
-                addRegistration()
+                alert("Good!, this tour exsits")
+
             } else {
                 alert("Sorry this tour does not exist, please add a different date.")
             }
