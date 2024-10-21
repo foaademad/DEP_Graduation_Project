@@ -1,0 +1,174 @@
+*{
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Button styling */
+.c3rds .btn {
+  
+  margin-top: 10px;
+  padding: 11px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  color: white;
+}
+
+.c3rds .btn i {
+  margin-right: 8px;
+  font-size: 25px;
+ 
+  padding-bottom: 18px;
+}
+
+.offcanvas {
+  width: 30% !important;
+}
+
+
+.offcanvas-body form .add-btn {
+  color: #fff!important;
+  background-color: orange !important;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+/* show cards of tour in bodyAdmin */
+.card-show {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  height: 300px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+
+.samll-card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-category {
+  color: #888;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card-price {
+  color: #28a745;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+
+.card-show-actions {
+  display: flex;
+  justify-content: space-around!important;  
+  width: 70%;
+  padding: 10px 0;
+
+}
+
+.refresh-btn, .delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.refresh-btn i, .delete-btn i {
+  font-size: 18px;
+  color: #888;
+}
+
+.refresh-btn:hover i {
+  color: #28a745;
+}
+
+.delete-btn:hover i {
+  color: #dc3545;
+}
+
+#cardList,#clientList,#cardRegistration{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* تاريخ الرحلة  */
+
+.card-date {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* عدد الزبائن */
+
+.card-guests {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+.card-show {
+
+  margin: 0px;
+
+}
+}

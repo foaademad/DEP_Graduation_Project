@@ -1,0 +1,234 @@
+
+
+
+@media(max-width: 1300px) { 
+    .feedback-slider-thumb{
+      display: none;
+    }
+    
+  }
+  
+
+    @media (max-width: 1000px) {
+      .section6 .promotion-content h4 {
+          font-size: 1.1em;
+          margin-bottom: 10px;
+        }
+        
+        .section6 .promotion-content h1 {
+          font-size: 2.1em;
+          margin-bottom: 20px;
+        }
+      }
+  
+  
+  
+  
+  
+  
+    @media (max-width: 900px) {
+     
+      .navbar ul{
+          margin-bottom: 0 !important;
+          padding-left: 0rem !important;
+      }
+      .section6 .promotion-container {
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+          margin: auto;
+          height: 400px;
+        }
+      
+    }
+  
+    @media (max-width: 820px) {
+      .arch-image {
+  display: none!important;
+      }
+      .last-image{
+          margin-right: 0px;
+        }
+      
+       
+    }
+  
+  
+  @media (max-width: 800px) {
+    
+  .hero-section {
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+  }
+  
+  .hero-section .content {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-section .content h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+    .hero-section {
+        margin-left: 60px;
+        align-items: center;
+        justify-content: end;
+    }
+  
+     .section2 .content {
+          
+          flex-direction: column;
+          align-items: center;
+      }
+  
+     .section2,.section3 .image-section, .details {
+          min-width: 100%;
+          text-align: center;
+      }
+      .section2 .details h2 {
+          font-size: 1.6em;
+          
+      }
+      .section3 .image-section img {
+          width: 80vw;
+          justify-content: flex-start;
+          display: flex;
+          
+      }
+      .section6 .promotion-container {
+          display: flex;
+          margin-top: 40px;
+         
+        }
+     
+        .section6 .promotion-content button {
+          padding: 5px 10px;
+          background-color: transparent;
+          border: 2px solid white;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 14px;
+          transition: background-color 0.3s;
+        }
+       
+  }
+  @media (max-width: 767) {
+
+    .navbar-expand-md .navbar-collapse {
+        display: flex ;
+
+        flex-direction: column!important;
+    }
+    
+  }
+
+
+
+
+
+
+
+  @media (max-width: 600px) {
+    .hero-section {
+        padding-left: 50px;
+        
+        margin-left: 20px;
+          } 
+        
+         
+      .section6 .promotion-container {
+          display: block;
+          
+      }
+      .section6 .promotion-box {
+          display: flex;
+          margin-bottom: 40px!important;
+          width: 100%;
+          flex-direction: column;
+          margin: 0;
+          padding: 20px;
+      }
+      /* .section6 .promotion-content h4 {
+          font-size: 1.9vw;
+          margin-bottom: 10px;
+        }
+        
+        .section6 .promotion-content h1 {
+          font-size: 2.9vw;
+          margin-bottom: 20px;
+        } */
+  
+    } 
+  
+  @media (max-width: 500px) {
+  
+      .company_img img{
+          width:15vw;
+      }
+      .section2 .details p {
+          font-size: .8em;
+          margin-bottom: 20px;
+      }
+      .section3 .details {
+  font-size: 3vw;
+      }
+      .promotion-text,.image-item{
+          width: 100%;
+      }
+      .promotion-text h1 {
+          font-size: 1.5em;
+          font-weight: bold;
+      }
+      .promotion-text button {
+          background-color: #ff7043;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+      }
+      h4{
+          font-size: 12px;
+      }
+      .section6 .promotion-container {
+  
+          width: 90%;
+          
+        }
+        .section6 .promotion-content h4 {
+          font-size: 1em;
+          margin-bottom: 10px;
+        }
+        
+        .section6 .promotion-content h1 {
+          font-size: 2em;
+          margin-bottom: 20px;
+        }
+      }
+  
+      @media (max-width: 500px) {
+      .section7 .details {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: baseline;
+        
+    }
+      
+
+  }

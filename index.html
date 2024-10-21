@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add icon  -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icon.svg">
+    <title>Travel & Tour Booking Website</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/a19206bc17.js" crossorigin="anonymous"></script>
+    <!-- owl carousel library => slide package (section 8)-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- swiper => section7 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css file  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+</head>
+
+<body>
+
+    <nav class="navbar  navbar-expand-lg bg-body-tertiary bg-gradient  w-100 top-1 z-3">
+            <div class="container-fluid">
+                <a class="llogo" href="index.html" id="nav-brand">
+                    <img src="./media/header.svg" class="mt-3" alt="" width="150px">
+                </a>
+                
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+
+                        <a class="nav-link " aria-current="page" href="index.html" id="navOverview"
+                            data-translate="navHome" >Home</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" aria-current="page" href="./about_page.html" id="navStudents"
+                             data-translate="navAbout">About</a>
+                    </li>
+                      
+                     <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-translate="navOurTravel">
+                            Our Travel
+                        </a>
+                        <ul style="margin-top: 20px;" class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"data-translate="navHoneymoonPackages">Honeymoon Packages</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="navToursPackages">Tours Packages</a></li>
+                            <li><a class="dropdown-item" href="#"data-translate="navMusicalEvents"> Musical Events</a></li>
+                            <li><a class="dropdown-item open-btn"  href="#" class="" id="openModalBtn" data-translate="navBuildPackage">Build Package</a></li>
+                        </ul>
+                    </div> 
+                    <!-- الفورم المغلقة -->
+                    <div class="modal" id="modal">
+                        <div class="modal-content">
+                        <span class="close-btn" id="closeModalBtn">&times;</span>
+
+                        <h4 data-translate="navBuildYourOwnPackage">Build Your Own Package</h4>
+
+                        <label for="destination1" data-translate="navEnterDestination">Enter destination (country, region or city)</label>
+                        <input type="text" id="destination1" placeholder="Switzerland">
+
+                        <label for="destination2" data-translate="navEnterDestination">Enter destination (country, region or city)</label>
+                        <input type="text" id="destination2" placeholder="Lauterbrunen">
+
+                        <div class="date-guest">
+                            <input type="date" placeholder="Start Date">
+                            <select>
+                            <option data-translate="navTwoAdults">2 adults</option>
+                            <option data-translate="navOneAdult" >1 adult</option>
+                            <option data-translate="navThreeAdults">3 adults</option>
+                            <option data-translate="navFourAdults" >4 adults</option>
+                            </select>
+                        </div>
+
+                        <h3 data-translate="navActivitiesPreferences">Activities preferences (optional)</h3>
+                        <div class="preferences">
+                            <label><input type="checkbox" data-translate="navCulture"> Culture</label>
+                            <label><input type="checkbox" data-translate="navOutdoors"> Outdoors</label>
+                            <label><input type="checkbox"data-translate="navRelaxing"> Relaxing</label>
+                            <label><input type="checkbox" data-translate="navWildlife"> Wildlife</label>
+                            <label><input type="checkbox" data-translate="navRomantic"> Romantic</label>
+                            <label><input type="checkbox" data-translate="navReligious"> Religious</label>
+                            <label><input type="checkbox" data-translate="navHiking"> Hiking</label>
+                            <label><input type="checkbox" data-translate="navMusical"> Musical</label>
+                            <label><input type="checkbox" data-translate="navShopping"> Shopping</label>
+                            <label><input type="checkbox" data-translate="navBusiness" checked> Business</label>
+                            <label><input type="checkbox" data-translate="navMuseums"> Museums</label>
+                            <label><input type="checkbox" data-translate="navParty"> Party</label>
+                            <label><input type="checkbox" data-translate="navTraditions"> Traditions</label>
+                            <label><input type="checkbox" data-translate="navWalks"> Walks</label>
+                            <label><input type="checkbox" data-translate="navFishing"> Fishing</label>
+                            <label><input type="checkbox" data-translate="navCruise"> Cruise</label>
+                            <label><input type="checkbox" checked> Guide</label>
+                            <label><input type="checkbox" checked> Healthcare</label>
+                            <label><input type="checkbox"> Accomodation</label>
+                        </div>
+
+                        <button class="build-btn" data-translate="navBuildPackage">Build Package</button>
+                        </div>
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="explore.html" id="nav-projects" data-translate="navExplore">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Upcomming Packages.html" id="nav-projects" data-translate="navUpcomingTravel">Upcomming Travel</a>
+                    </li>
+                    
+                </ul>
+
+                <div class="buttons-container">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i id="lang-icon" class="fas fa-globe"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li>
+                            <a class="dropdown-item" id="lang-en" href="#" onclick="setLanguage('en')">En</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" id="lang-ar" href="#" onclick="setLanguage('ar')">Ar</i></a>
+                        </li>
+                        </ul>
+                    </div>
+                    <img src="./media/user-img/download.jpg" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" alt="" width="50px" height="50px" class="rounded-circle">
+                    
+
+                </div>
+              </div>
+            </div>
+    </nav>
+    
+    <!-- form offcanvas  -->                 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header z-3">
+
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="login-root">
+            <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+              <div class="loginbackground box-background--white padding-top--64">
+                <div class="loginbackground-gridContainer">
+                  <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                    <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                    </div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                    <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                    <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                    <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                    <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                    <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                    <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                    <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+                  </div>
+                  <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                    <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+                  <h1><a href="http://blog.stackfindover.com/" rel="dofollow" data-translate="navLoginForm" >Login Form</a></h1>
+                </div>
+                <!-- login as a user  -->
+                <div class="formbg-outer " id="loginForm">
+                  <div class="formbg">
+                    <div class="formbg-inner padding-horizontal--48">
+                      <span class="padding-bottom--15" data-translate="navSignInToAccount">Sign in to your account</span>
+                      <form id="stripe-loginform1">
+                        <div class="field padding-bottom--24">
+                          <label for="email" data-translate="navEmail">Email</label>
+                          <input type="email" name="email">
+                        </div>
+                        <div class="field padding-bottom--24">
+                          <div class="grid--50-50">
+                            <label for="password" data-translate="navPassword">Password</label>
+                            <div class="reset-pass">
+                              <a href="#" data-translate="navForgotYourPassword">Forgot your password?</a>
+                            </div>
+                          </div>
+                          <input type="password" name="password">
+                        </div>
+                        
+                        <div class="field padding-bottom--24">
+                          <input type="submit" name="submit" value="Continue">
+                        </div>
+                        <div class="field">
+                          <a class="ssolink" href="#" id="loginAdmin" data-translate="navLoginAsAdmin">Login As Admin</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="footer-link padding-top--24">
+                    <span data-translate="navDontHaveAnAccount">Don't have an account? <a href="#" id="showSignUp"data-translate="navSignUp">Sign up</a></span>
+                  </div>
+                </div>
+
+                <!-- login as a new user  -->
+                <div class="formbg-outer " id="signUpForm" style="display: none;">
+                    <div class="formbg">
+                      <div class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15"data-translate="navMakeANewAccount">Make a new a account</span>
+                        <form id="stripe-loginform2">
+                          <div class="field padding-bottom--24">
+                            <label for="email" data-translate="navEmail">Email</label>
+                            <input type="email" id="clientEmail"required>
+                        </div>
+                          <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password" data-translate="navPassword">Password</label>
+                            </div>
+                            <input type="password" id="clientpass" required>
+                        </div>
+                          <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password" data-translate="navConfirmPassword">Confirm Password</label>
+                            </div>
+                            <input type="password" id="clientconfirmpass" required>                     
+                          </div>
+                          
+                          <div class="field padding-bottom--24">
+                            <input type="submit" name="submit" onclick="addClient()" value="Sign Up">
+                          </div>
+                          
+                        </form>
+                      </div>
+                    </div>
+                    <div class="footer-link padding-top--24">
+                      <span data-translate="navAlreadyHaveAnAccount">Already have an account? <a href="#" id="showLogin" data-translate="navLogin">Login</a></span>
+                    </div>
+                </div>
+
+                <!-- login as admin  -->
+                <div class="formbg-outer " id="loginadminForm" style="display: none;">
+                    <div class="formbg">
+                      <div class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15"data-translate="navLoginAsAdmin">login As Admin </span>
+                        <form id="stripe-loginform3">
+                          <div class="field padding-bottom--24">
+                            <label for="email" data-translate="navUsername" >Username</label>
+                            <input type="text" name="text" id="adminUsernameInput" required>
+                          </div>
+                          <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password" data-translate="navPassword">Password</label>
+                            </div>
+                            <input type="password" name="password" id="adminPasswordInput" required>
+                          </div>
+                          <div class="field padding-bottom--24">
+                           
+                            <input type="submit" name="submit" value="Login">
+                          </div>     
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div> 
+    </div>
+    <!-- offcanvas end  -->
+
+    <!-- main content    -->
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./media/home/pyramid_with_black_layer_2.png" class="d-block w-100 img_main " alt="...">
+                    <div class="hero-section">
+                        <div class="content ">
+                            <h1 data-translate="navWhereYouAreGoingTo"><span data-translate="navNoMatter">No matter</span> where you're going to, we'll take you there</h1>
+                            <div class="form-container">
+                                <form>
+                                    <input type="text"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;"
+                                        placeholder="Where to?" class="form-input" required>
+                                    <select class="form-select"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;" required>
+                                        <option data-translate="navTravelType">Travel Type</option>
+                                        <option data-translate="navAdventure" >Adventure</option>
+                                        <option data-translate="navRelaxation">Relaxation</option>
+                                        <option data-translate="navExploration">Exploration</option>
+                                    </select>
+                                    <select class="form-select" required>
+                                        <option data-translate="navDuration">Duration</option>
+                                        <option data-translate="nav1To3Days">1-3 Days</option>
+                                        <option data-translate="nav4To7Days">4-7 Days</option>
+                                        <option data-translate="nav1To2Weeks">1-2 Weeks</option>
+                                    </select>
+                                    <button type="submit" class="submit-btn" data-translate="navSubmit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="booking-info">
+                                <div class="avatars">
+                                    <!-- Use an avatar placeholder or actual images -->
+                                    <img src="./media/user-img/1.jpg" alt="Avatar 1" class="avatar">
+                                    <img src="./media/user-img/2.jpg" alt="Avatar 2" class="avatar">
+                                    <img src="./media/user-img/3.jpg" alt="Avatar 3" class="avatar">
+                                    <img src="./media/user-img/5.jpg" alt="Avatar 4" class="avatar">
+                                </div>
+                                <p data-translate="navPeopleBooked">2,500 people booked Tomorrowland Event in the last 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src=" ./media/home/image_with_black_layer.png" class="d-block w-100 img_main " alt="...">
+                    <div class="hero-section">
+                        <div class="content ">
+                            <h1 data-translate="navWhereYouAreGoingTo"><span data-translate="navNoMatter">No matter</span> where you're going to, we'll take you there</h1>
+                            <div class="form-container">
+                                <form>
+                                    <input type="text"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;"
+                                        placeholder="Where to?" class="form-input" required>
+                                    <select class="form-select"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;" required>
+                                        <option data-translate="navTravelType">Travel Type</option>
+                                        <option data-translate="navAdventure" >Adventure</option>
+                                        <option data-translate="navRelaxation">Relaxation</option>
+                                        <option data-translate="navExploration">Exploration</option>
+                                    </select>
+                                    <select class="form-select" required>
+                                        <option data-translate="navDuration">Duration</option>
+                                        <option data-translate="nav1To3Days">1-3 Days</option>
+                                        <option data-translate="nav4To7Days">4-7 Days</option>
+                                        <option data-translate="nav1To2Weeks">1-2 Weeks</option>
+                                    </select>
+                                    <button type="submit" class="submit-btn" data-translate="navSubmit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="booking-info">
+                                <div class="avatars">
+                                    <!-- Use an avatar placeholder or actual images -->
+                                    <img src="./media/user-img/1.jpg" alt="Avatar 1" class="avatar">
+                                    <img src="./media/user-img/2.jpg" alt="Avatar 2" class="avatar">
+                                    <img src="./media/user-img/3.jpg" alt="Avatar 3" class="avatar">
+                                    <img src="./media/user-img/5.jpg" alt="Avatar 4" class="avatar">
+                                </div>
+                                <p data-translate="navPeopleBooked">2,500 people booked Tomorrowland Event in the last 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="./media/home/travel-world.jpg" class="d-block w-100 img_main " alt="...">
+                    <div class="hero-section">
+                        <div class="content ">
+                            <h1 data-translate="navWhereYouAreGoingTo"><span data-translate="navNoMatter">No matter</span> where you're going to, we'll take you there</h1>
+                            <div class="form-container">
+                                <form>
+                                    <input type="text"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;"
+                                        placeholder="Where to?" class="form-input" required>
+                                    <select class="form-select"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;" required>
+                                        <option data-translate="navTravelType">Travel Type</option>
+                                        <option data-translate="navAdventure" >Adventure</option>
+                                        <option data-translate="navRelaxation">Relaxation</option>
+                                        <option data-translate="navExploration">Exploration</option>
+                                    </select>
+                                    <select class="form-select" required>
+                                        <option data-translate="navDuration">Duration</option>
+                                        <option data-translate="nav1To3Days">1-3 Days</option>
+                                        <option data-translate="nav4To7Days">4-7 Days</option>
+                                        <option data-translate="nav1To2Weeks">1-2 Weeks</option>
+                                    </select>
+                                    <button type="submit" class="submit-btn" data-translate="navSubmit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="booking-info">
+                                <div class="avatars">
+                                    <!-- Use an avatar placeholder or actual images -->
+                                    <img src="./media/user-img/1.jpg" alt="Avatar 1" class="avatar">
+                                    <img src="./media/user-img/2.jpg" alt="Avatar 2" class="avatar">
+                                    <img src="./media/user-img/3.jpg" alt="Avatar 3" class="avatar">
+                                    <img src="./media/user-img/5.jpg" alt="Avatar 4" class="avatar">
+                                </div>
+                                <p data-translate="navPeopleBooked">2,500 people booked Tomorrowland Event in the last 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="./media/home/image_with_black_layer_new.png" class="d-block w-100 img_main " alt="...">
+                    <div class="hero-section">
+                        <div class="content ">
+                            <h1 data-translate="navWhereYouAreGoingTo"><span data-translate="navNoMatter">No matter</span> where you're going to, we'll take you there</h1>
+                            <div class="form-container">
+                                <form>
+                                    <input type="text"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;"
+                                        placeholder="Where to?" class="form-input" required>
+                                    <select class="form-select"
+                                        style="border-right: 2px solid rgba(255, 255, 255, 0.808)!important;" required>
+                                        <option data-translate="navTravelType">Travel Type</option>
+                                        <option data-translate="navAdventure" >Adventure</option>
+                                        <option data-translate="navRelaxation">Relaxation</option>
+                                        <option data-translate="navExploration">Exploration</option>
+                                    </select>
+                                    <select class="form-select" required>
+                                        <option data-translate="navDuration">Duration</option>
+                                        <option data-translate="nav1To3Days">1-3 Days</option>
+                                        <option data-translate="nav4To7Days">4-7 Days</option>
+                                        <option data-translate="nav1To2Weeks">1-2 Weeks</option>
+                                    </select>
+                                    <button type="submit" class="submit-btn" data-translate="navSubmit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="booking-info">
+                                <div class="avatars">
+                                    <!-- Use an avatar placeholder or actual images -->
+                                    <img src="./media/user-img/1.jpg" alt="Avatar 1" class="avatar">
+                                    <img src="./media/user-img/2.jpg" alt="Avatar 2" class="avatar">
+                                    <img src="./media/user-img/3.jpg" alt="Avatar 3" class="avatar">
+                                    <img src="./media/user-img/5.jpg" alt="Avatar 4" class="avatar">
+                                </div>
+                                <p data-translate="navPeopleBooked">2,500 people booked Tomorrowland Event in the last 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="section3">
+            <div class="container">
+                <div class="content">
+                    <div class="details">
+
+                        <p class="subheading" data-translate="sectionFastEasy">Fast & Easy</p>
+                        <h1 data-translate="sectionGetYourFavouriteResortBookings"><span>Get</span> Your Favourite Resort Bookings</h1>
+
+                        <div class="step">
+                            <div class="icon yellow">
+                                <!-- You can use an icon or an emoji -->
+                                🏖️
+                            </div>
+                            <div class="step-text">
+                                <h4 data-translate="sectionChooseDestination">Choose Destination</h4>
+                                <p data-translate="sectionCheckAvailability">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="icon red">
+                                <!-- You can use an icon or an emoji -->
+                                🏨
+                            </div>
+                            <div class="step-text">
+                                <h4 data-translate="sectionStepDescription">Check Availability</h4>
+                                <p data-translate="sectionCheckAvailability">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="icon blue">
+                                <!-- You can use an icon or an emoji -->
+                                🚗
+                            </div>
+                            <div class="step-text">
+                                <h4 data-translate="sectionLetsGo">Let's Go</h4>
+                                <p data-translate="sectionCheckAvailability">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="image-section">
+                        <img src="./media/Illustration.jpg" alt="Romantic Destination">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 4 -->
+        <section class="section4">
+            <div class="banner">
+                <div class="banner-text" data-translate="sectionLetsMakeYourNextHolidayAmazing">
+                    Let’s Make Your <br> Next Holiday <span>Amazing</span>
+                </div>
+                <div class="underline"></div>
+            </div>
+        </section>
+        <!-- section 5 -->
+        <section class="section5">
+            <div class="tour-promotion">
+                <div class="content">
+                    <div class="promotion-text">
+                        <h4 data-translate="sectionPromotion">Promotion</h4>
+                        <h1 data-translate="sectionWeProvideYouBestEuropeSightseeingTours">We Provide You Best Europe Sightseeing Tours</h1>
+                        <p data-translate="sectionEtLaboreHarum">Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a
+                            laudantium...</p>
+                        <button data-translate="sectionViewPackages">View Packages</button>
+
+                    </div>
+                    <div class="image-grid">
+                        <div class="image-item"><img src="./media/promotion/125894_black-layer.png"
+                                alt="Big Ben"><span>$700</span></div>
+                        <div class="image-item"><img src="./media/promotion/european-whirl-black-layer.png"
+                                alt="Colosseum"><span>$500</span></div>
+                        <div class="image-item"><img src="./media/promotion/colosseum_with_black_layer.png"
+                                alt="Berlin Cathedral"><span>$400</span></div>
+                        <div class="image-item last-image"><img src="./media/promotion/sagrada-familia-black-layer.png"
+                                alt="Venice"><span>$800</span></div>
+                    </div>
+                </div>
+                <div class="images-section">
+                    <div class="arch-image">
+                        <img src="./media/promotion/image 50.png" alt="Eiffel Tower">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- section 7 -->
+        <section id="section7" class="section7">
+            <div class="head-content">
+                <span data-translate="navTrendy">trendy</span>
+                <h1 data-translate="navOurTrendingTravel">Our Trending <span>Travel</span></h1>
+            </div>
+            <div class="sliddes">
+                <div class="container-slide swiper">
+                    <div class="slider-wrapper">
+                        <div class="card-list swiper-wrapper">
+
+                            <div class="card-item swiper-slide">
+                                <div class="image-container">
+                                    <img src="./media/package/Brazil.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Brazil-flag.png" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 8 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 30 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Amazon</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> Brazil
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1,000</span>
+                                        <span class="old-price">$1,123</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item swiper-slide ">
+                                <div class="image-container">
+                                    <img src="./media/package/California.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Flag_of_California.png" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 4 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 22 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Hawaii</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> California
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1,500</span>
+                                        <span class="old-price">$2,223</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <div class="image-container">
+                                    <img src="./media/package/Egypt.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Egypt-flag.jpg" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 48 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 100 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Giza</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> Egypt
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1.500</span>
+                                        <span class="old-price">$1,823</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <div class="image-container">
+                                    <img src="./media/package/italy.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Italy flag.jpg" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 22 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 20 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Roma</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> Italy
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1,300</span>
+                                        <span class="old-price">$1,800</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <div class="image-container">
+                                    <img src="./media/package/Paris.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Paris flage.jpg" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 20 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 39 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Paris</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> France
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1,100</span>
+                                        <span class="old-price">$1,200</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <div class="image-container">
+                                    <img src="./media/package/Switzerland.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Switzerland-flag.jpg" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 18 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 33 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Bern</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> Switzerland
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1,400</span>
+                                        <span class="old-price">$1,623</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+
+                            <div class="card-item swiper-slide">
+                                <div class="image-container">
+                                    <img src="./media/package/Thailand.jpg" alt="Toucan in Amazon">
+                                    <div class="flag">
+                                        <img src="./media/package/Thailand flage.jpg" alt="Brazil Flag">
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <div class="days">
+                                            <i class="fas fa-calendar-alt"></i> 10 Days
+                                        </div>
+                                        <div class="people">
+                                            <i class="fas fa-user-friends"></i> 10 People Going
+                                        </div>
+                                    </div>
+                                    <h2>Ko Samui</h2>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i> Thailand
+                                    </div>
+                                    <div class="price">
+                                        <span class="new-price">$1,100</span>
+                                        <span class="old-price">$1,423</span>
+                                    </div>
+                                    <p class="description">
+                                        Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia...
+                                    </p>
+                                    <button class="explore-button">Explore Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="menty-grey swiper-button-prev"></div>
+                        <div class="menty-grey swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 8 -->
+        <section class="section8">
+            <div class="customer-feedback text-center">
+                <div class="container text-center">
+                    <div class="contentofsection">
+                        <div class="">
+                            <div>
+                                <h2 class="section-title" data-translate="navWhatClientsSay">What Clients Say</h2>
+                            </div>
+                        </div><!-- /End col -->
+                    </div><!-- /End row -->
+
+                    <div class="row">
+                        <div class="reactions">
+                            <div class="owl-carousel feedback-slider">
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="//c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">Lisa Redfern</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="5">
+                                        5
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="https://i.postimg.cc/ydBjdm20/michael-dam-m-EZ3-Po-FGs-k-unsplash-1.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">Cassi</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="4">
+                                        4
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">Md Nahidul</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="5">
+                                        5
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="./media/user-img/1.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">Jone Nahidul</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="3">
+                                        3
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="./media/user-img/2.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">Agem somth</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="5">
+                                        5
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="./media/user-img/3.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">Jana Ahmed</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="5">
+                                        5
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                                <!-- slider item -->
+                                <div class="feedback-slider-item">
+                                    <img src="./media/user-img/5.jpg"
+                                        class="center-block img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name"> Ahmed ALi</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is
+                                        a long established fact that a reader will be distracted by the readable its
+                                        layout.</p>
+                                    <span class="light-bg customer-rating" data-rating="4">
+                                        4
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                                <!-- /slider item -->
+
+                            </div><!-- /End feedback-slider -->
+
+                            <!-- side thumbnail -->
+                            <div class="feedback-slider-thumb hidden-xs">
+                                <div class="thumb-prev">
+                                    <span>
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
+                                            alt="Customer Feedback">
+                                    </span>
+                                    <span class="light-bg customer-rating">
+                                        5
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+
+                                <div class="thumb-next">
+                                    <span>
+                                        <img src="https://i.postimg.cc/ydBjdm20/michael-dam-m-EZ3-Po-FGs-k-unsplash-1.jpg"
+                                            alt="Customer Feedback">
+                                    </span>
+                                    <span class="light-bg customer-rating">
+                                        4
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+
+                                <div class="thumb-next">
+                                    <span>
+                                        <img src="./media/user-img/1.jpg"
+                                            alt="Customer Feedback">
+                                    </span>
+                                    <span class="light-bg customer-rating">
+                                        3
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+
+                                <div class="thumb-next">
+                                    <span>
+                                        <img src="./media/user-img/2.jpg"
+                                            alt="Customer Feedback">
+                                    </span>
+                                    <span class="light-bg customer-rating">
+                                        5
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+
+                                <div class="thumb-next">
+                                    <span>
+                                        <img src="./media/user-img/3.jpg"
+                                            alt="Customer Feedback">
+                                    </span>
+                                    <span class="light-bg customer-rating">
+                                        4
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+
+                                <div class="thumb-next">
+                                    <span>
+                                        <img src="./media/user-img/5.jpg"
+                                            alt="Customer Feedback">
+                                    </span>
+                                    <span class="light-bg customer-rating">
+                                        4
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- /side thumbnail -->
+                        </div><!-- /End col -->
+                    </div><!-- /End row -->
+                </div><!-- /End container -->
+            </div><!-- /End customer-feedback -->
+
+
+
+        </section>
+
+    </main>
+
+    <!-- Footer    -->
+    <footer class="footer" id="footer">
+        <!-- start footer-main -->
+        <div class="footer-main">
+            <!-- travel -->
+            <div class="footer-main-travel">
+                <img src="/media/header.svg" alt="">
+                <p class="p" data-translate="navTravelDescription">Travel helps companies manage payments easily.</p>
+                <!-- <div class="icon-row">
+                    <a href="#"><img src="svg/lin.svg" alt=""></a>
+                    <a href="#"><img src="svg/messag.svg" alt=""></a>
+                    <a href="#"><img src="svg/twiter.svg" alt=""></a>
+                    <a href="#"><img src="svg/fac.svg" alt=""></a>
+                </div> -->
+            </div>
+            <!-- company -->
+            <div class="footer-main-Company">
+                <h4 data-translate="navCompany">Company</h4>
+                <ul>
+                    <li data-translate="navAboutUs">About Us</li>
+                    <li data-translate="navCareers">Careers</li>
+                    <li data-translate="navBlog">Blog</li>
+                    <li data-translate="navPricing">Pricing</li>
+                </ul>
+            </div>
+            <!-- Destinations -->
+            <div class="footer-main-Destinations">
+                <h4 data-translate="navDestinations">Destinations</h4>
+                <ul>
+                    <li data-translate="navMaldives">Maldives</li>
+                    <li data-translate="navLosAngeles">Los Angelas</li>
+                    <li data-translate="navLasVegas">Las Vegas</li>
+                    <li data-translate="navToronto">Torronto</li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div class="footer-main-Newsletter">
+                <h4 data-translate="navJoinOurNewsletter"> Join Our Newsletter</h4>
+                <div class="footer-main-Newsletter-bp">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit" data-translate="navSubscribe">Subscribe</button>
+                </div>
+                <p class="p" data-translate="navNewsletterDescription">Will send you weekly updates for your better tour packages.</p>
+            </div>
+        </div>
+        <!-- end footer-main -->
+        <!-- start footer-end -->
+        <div class="footer-end">
+            <p data-translate="navCopyright">Copyright @ Travel Team 2024. All Rights Reserved.</p>
+        </div>
+        <!-- end footer-end -->
+    </footer>
+
+
+
+
+
+
+    <!-- JavaScript Bootstrap and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- auto moving slide in section7 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!-- swiper => section7 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- language file  -->
+    <script src="./js/lannguage_thems.js"></script>
+    <!-- main file  -->
+    <script src="./js/addClient.database.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

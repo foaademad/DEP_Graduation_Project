@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcomming Packages</title>
+    <Style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./media/home/image_with_black_layer.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 0;
+}
+
+.coming-soon {
+    font-size: 48px;
+    font-family: 'Cursive', sans-serif;
+    display: inline-block;
+    color: orange;
+}
+
+.coming-soon span {
+    opacity: 0;
+}
+
+    </Style>
+</head>
+<body>
+
+    <div class="coming-soon">
+      <span>C</span><span>o</span><span>m</span><span>i</span><span>n</span><span>g</span> 
+      <span>S</span><span>o</span><span>o</span><span>n</span>!
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <Script>
+        // التأكد من تحميل DOM بشكل صحيح قبل البدء في الأنيميشن
+        window.onload = function() {
+        // استخدام GSAP لتحريك الحروف واحداً تلو الآخر
+        gsap.fromTo(".coming-soon span", 
+            {opacity: 0, x: -50},  // الحروف تبدأ غير ظاهرة ومنحرفة قليلاً
+            {opacity: 1, x: 0, stagger: 0.1, duration: 0.5}  // الحروف تظهر واحدة تلو الأخرى مع تأثير انحراف
+        );
+        };
+
+    </Script>
+</body>
+</html>
